@@ -14,7 +14,7 @@ const Post = require('./models/post');
 const salt='$2b$10$1Z9Z9Z9Z9Z9Z9Z9Z9Z9Z9Z';
 
 app.use(cors({
-    origin: 'http://localhost:3001',
+    origin: 'https://blog-website-frontend-pi.vercel.app/',
     credentials: true,
 }));
 
