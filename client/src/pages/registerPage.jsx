@@ -9,7 +9,7 @@ export default function RegisterPage() {
     async function register(e) {
         e.preventDefault();
 
-        const response = await fetch("https://blog-website-api-rho.vercel.app//register", {
+        const response = await fetch("https://blog-website-api-rho.vercel.app/register", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
