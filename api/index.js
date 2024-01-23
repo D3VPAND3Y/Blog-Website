@@ -29,7 +29,10 @@ mongoose.connect('mongodb://localhost:27017/',{
     dbName: 'blog',
 })
 
-
+app.get('/', (req,res) => {
+    res.send('Hello world');
+}
+);
 
 app.post('/register',async (req, res) => {
     const {username,password} = req.body;

@@ -10,7 +10,7 @@ export default function PostPage(){
     const {user} = useContext(userContext)
     useEffect(() => {
         // console.log(id);
-        fetch(`http://localhost:4000/posts/${id}`).then(response => {
+        fetch(`https://blog-website-api-rho.vercel.app//posts/${id}`).then(response => {
             response.json().then(post => {
                 setPost(post);
                 // console.log(post);

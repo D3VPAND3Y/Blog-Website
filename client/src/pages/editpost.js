@@ -14,7 +14,7 @@ export default function EditPost(){
 
       useEffect(() => {
         // console.log(id);
-        fetch(`http://localhost:4000/posts/${id}`).then(response => {
+        fetch(`https://blog-website-api-rho.vercel.app//posts/${id}`).then(response => {
             response.json().then(postInfo => {
                 setTitle(postInfo.title);
                 setSummary(postInfo.summary);
