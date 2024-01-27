@@ -10,7 +10,7 @@ export default function LoginPage() {
 
     async function login(ev){
         ev.preventDefault();
-        const resp = await fetch("https://blog-website-api-rho.vercel.app/login",{
+        const resp = await fetch("http://localhost:4000/login",{
             method: "POST",
             headers: {
                 "Content-Type": "application/json",

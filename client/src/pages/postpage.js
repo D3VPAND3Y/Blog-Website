@@ -1,16 +1,16 @@
 import { formatISO9075 } from "date-fns";
-import { useContext, useEffect,useState } from "react";
+import {  useEffect,useState } from "react";
 import { useParams } from "react-router-dom";
-import { userContext } from "../userContext";
+// import { userContext } from "../userContext";
 // import { Link } from "react-router-dom";
 
 export default function PostPage(){
     const {id} = useParams();
     const [post,setPost] = useState(null);
-    const {user} = useContext(userContext)
+    // const {user} = useContext(userContext)
     useEffect(() => {
         // console.log(id);
-        fetch(`https://blog-website-api-rho.vercel.app/posts/${id}`).then(response => {
+        fetch(`http://localhost:4000/posts/${id}`).then(response => {
             response.json().then(post => {
                 setPost(post);
                 // console.log(post);

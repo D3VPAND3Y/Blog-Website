@@ -25,7 +25,7 @@ import { Navigate } from 'react-router-dom';
             formData.append('files', files[0]);
         }
 
-        const response = await fetch('https://blog-website-api-rho.vercel.app/posts', {
+        const response = await fetch('http://localhost:4000/posts', {
             method: 'POST',
             body: formData,
             credentials: 'include',

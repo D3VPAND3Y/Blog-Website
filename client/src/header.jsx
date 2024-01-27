@@ -8,7 +8,7 @@ export default function Header() {
   const {user,setUser} = useContext(userContext);
 
   useEffect(() => {
-      fetch("https://blog-website-api-rho.vercel.app/profile", {
+      fetch("http://localhost:4000/profile", {
         credentials: "include",
       }).then((resp) => {
         if (resp.ok) {
@@ -22,7 +22,7 @@ export default function Header() {
   }, [setUser]);
 
   function logout(){
-    fetch("https://blog-website-api-rho.vercel.app/logout",{
+    fetch("http://localhost:4000/logout",{
       method: "POST",
       credentials: "include",
     }).then((resp) => {
@@ -44,7 +44,9 @@ export default function Header() {
             <Link to="/create" className="create">
               Create Post
             </Link>
-            <a onClick={logout}>Logout</a>
+            <a onClick={logout} className="logout">
+              Logout
+            </a>
 
             </>
           )}
